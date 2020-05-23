@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewControllers.TownScene">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Backgrounds/townBG.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="258.0" layoutY="9.0" onMouseClicked="#enterGymButton" prefHeight="206.0" prefWidth="204.0" />
+      <Label layoutX="464.0" layoutY="383.0" onMouseClicked="#enterPokemartButton" prefHeight="171.0" prefWidth="171.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="643.0" layoutY="636.0" onMouseClicked="#startWildFight" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/fightIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="130.0" fitWidth="124.0" layoutX="400.0" layoutY="662.0" onMouseClicked="#openMapButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/mapIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pokedexButton" fitHeight="112.0" fitWidth="116.0" layoutX="516.0" layoutY="668.0" onMouseClicked="#showPokedex" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/pokedexIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="noPokemonsWarning" fitHeight="360.0" fitWidth="455.0" layoutX="358.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Images/fightsBG/noPokemonsWarning.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="101.0" fitWidth="112.0" layoutX="668.0" layoutY="23.0" onMouseClicked="#saveFile" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/saveFileIcon.png" />
+         </image>
+      </ImageView>
+      <Group fx:id="saveGroup" layoutX="174.0" layoutY="250.0" visible="false">
+         <children>
+            <ImageView fitHeight="300.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/saveWarning.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="132.0" layoutY="210.0" onMouseClicked="#saveProgress" prefHeight="39.0" prefWidth="93.0" />
+            <Label layoutX="303.0" layoutY="210.0" onMouseClicked="#closeSaveWarning" prefHeight="39.0" prefWidth="66.0" />
+         </children>
+      </Group>
+   </children>
+</Pane>

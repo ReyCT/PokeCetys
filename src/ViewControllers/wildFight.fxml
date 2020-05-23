@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewControllers.wildFight">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="801.0" stroke="TRANSPARENT" strokeType="INSIDE" width="801.0" />
+      <Group fx:id="mainBattleScreenGroup">
+         <children>
+            <ImageView fx:id="fightBackground" fitHeight="800.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerPokemonImg" fitHeight="150.0" fitWidth="200.0" layoutX="105.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="800.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/fightsBG/textLabels.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="enemyPokemonImg" fitHeight="150.0" fitWidth="200.0" layoutX="498.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true" />
+            <ProgressBar fx:id="playerHPprogressBar" layoutX="544.0" layoutY="440.0" prefHeight="21.0" prefWidth="196.0" progress="0.0" />
+            <ProgressBar fx:id="enemyHPprogressBar" layoutX="148.0" layoutY="201.0" prefHeight="21.0" prefWidth="196.0" progress="0.0" />
+            <ProgressBar fx:id="expBarProgressBar" layoutX="569.0" layoutY="484.0" prefHeight="12.0" prefWidth="194.0" progress="0.0" />
+            <Label fx:id="fightTextLabel" alignment="TOP_LEFT" layoutX="39.0" layoutY="539.0" prefHeight="96.0" prefWidth="357.0" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="enemyPokemonName" layoutX="41.0" layoutY="158.0" prefHeight="34.0" prefWidth="176.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="enemyPokemonLevel" alignment="CENTER_RIGHT" layoutX="266.0" layoutY="158.0" prefHeight="36.0" prefWidth="78.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="playerPokemonName" layoutX="477.0" layoutY="391.0" prefHeight="34.0" prefWidth="176.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="playerPokemonLevel" alignment="CENTER_RIGHT" layoutX="662.0" layoutY="391.0" prefHeight="36.0" prefWidth="78.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="fightButton" layoutX="449.0" layoutY="547.0" onMouseClicked="#showHability" prefHeight="36.0" prefWidth="105.0" />
+            <Label fx:id="bagButton" layoutX="635.0" layoutY="547.0" onMouseClicked="#showBag" prefHeight="36.0" prefWidth="68.0" />
+            <Label fx:id="catchButton" layoutX="448.0" layoutY="597.0" onMouseClicked="#catchGroup" prefHeight="40.0" prefWidth="110.0" />
+            <Label fx:id="runButton" layoutX="635.0" layoutY="597.0" onMouseClicked="#run" prefHeight="40.0" prefWidth="69.0" />
+         </children>
+      </Group>
+      <Group fx:id="catchPokemonGroup" layoutX="116.0" layoutY="284.0" visible="false">
+         <children>
+            <ImageView fx:id="catchPokemonButton" fitHeight="94.0" fitWidth="103.0" layoutY="252.0" onMouseClicked="#catchPokemon" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/pokemartItems/pokeball.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="pokeballsQuantity" layoutX="87.0" layoutY="270.0" prefHeight="57.0" prefWidth="91.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="pokeballLoading" fitHeight="69.0" fitWidth="73.0" layoutX="436.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/fightsBG/pokeballLoading.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
+      <Group fx:id="habilityGroup" layoutX="44.0" layoutY="517.0" visible="false">
+         <children>
+            <ImageView fx:id="habilityLabel1" fitHeight="82.0" fitWidth="182.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/fightsBG/hability.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="habilityLabel2" fitHeight="82.0" fitWidth="182.0" layoutX="175.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/fightsBG/hability.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="habilityLabel3" fitHeight="82.0" fitWidth="182.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/fightsBG/hability.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="habilityLabel4" fitHeight="82.0" fitWidth="182.0" layoutX="175.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/fightsBG/hability.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="hability1Button" alignment="CENTER" layoutX="7.0" layoutY="24.0" onMouseClicked="#hability1" prefHeight="34.0" prefWidth="150.0" visible="false">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="hability2Button" alignment="CENTER" layoutX="182.0" layoutY="24.0" onMouseClicked="#hability2" prefHeight="34.0" prefWidth="150.0" visible="false">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="hability3Button" alignment="CENTER" layoutX="7.0" layoutY="75.0" onMouseClicked="#hability3" prefHeight="34.0" prefWidth="150.0" visible="false">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="hability4Button" alignment="CENTER" layoutX="182.0" layoutY="75.0" onMouseClicked="#hability4" prefHeight="34.0" prefWidth="150.0" visible="false">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <Group fx:id="bagGroup" layoutX="32.0" layoutY="533.0" visible="false">
+         <children>
+            <ImageView fx:id="healsButton" fitHeight="99.0" fitWidth="113.0" layoutX="87.0" onMouseClicked="#healSelectedPokemon" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/pokemartItems/heals.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="healsQuantity" layoutX="169.0" layoutY="22.0" prefHeight="57.0" prefWidth="91.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <Group fx:id="caughtGroup" layoutX="1.0" layoutY="1.0" visible="false">
+         <children>
+            <ImageView fitHeight="800.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/fightsBG/caughtPokemonBG.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="caughtPokemonImg" fitHeight="295.0" fitWidth="337.0" layoutX="231.0" layoutY="253.0" pickOnBounds="true" preserveRatio="true" />
+            <Label alignment="CENTER" layoutX="145.0" layoutY="72.0" text="¡You caught!">
+               <font>
+                  <Font name="System Bold Italic" size="85.0" />
+               </font>
+            </Label>
+            <Label fx:id="caughtPokemonName" alignment="CENTER" layoutX="160.0" layoutY="540.0" prefHeight="55.0" prefWidth="480.0">
+               <font>
+                  <Font name="System Bold" size="38.0" />
+               </font>
+            </Label>
+            <Label fx:id="exitCaughtLabel" alignment="BOTTOM_RIGHT" layoutY="1.0" onMouseClicked="#run" prefHeight="798.0" prefWidth="799.0" text="Click anywhere to continue..." textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <ImageView fx:id="youLostSign" fitHeight="354.0" fitWidth="743.0" layoutX="30.0" layoutY="304.0" onMouseClicked="#leaveFightButton" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Images/fightsBG/youLostSign.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="youWonSign" fitHeight="199.0" fitWidth="743.0" layoutX="30.0" layoutY="305.0" onMouseClicked="#youWonButton" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Images/fightsBG/youWonSign.png" />
+         </image>
+      </ImageView>
+      <Group fx:id="choosePokemonScreen" layoutY="133.0">
+         <children>
+            <ImageView fitHeight="800.0" fitWidth="800.0" layoutX="1.0" layoutY="-133.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/fightsBG/chooseApokemon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="beltPokemon1" fitHeight="120.0" fitWidth="118.0" layoutX="48.0" layoutY="141.0" onMouseClicked="#beltPokemon1selected" pickOnBounds="true" preserveRatio="true" visible="false" />
+            <ImageView fx:id="beltPokemon2" fitHeight="110.0" fitWidth="120.0" layoutX="304.0" layoutY="146.0" onMouseClicked="#beltPokemon2selected" pickOnBounds="true" preserveRatio="true" visible="false" />
+            <ImageView fx:id="beltPokemon3" fitHeight="113.0" fitWidth="128.0" layoutX="556.0" layoutY="145.0" onMouseClicked="#beltPokemon3selected" pickOnBounds="true" preserveRatio="true" visible="false" />
+            <ImageView fx:id="beltPokemon4" fitHeight="110.0" fitWidth="134.0" layoutX="40.0" layoutY="338.0" onMouseClicked="#beltPokemon4selected" pickOnBounds="true" preserveRatio="true" visible="false" />
+            <ImageView fx:id="beltPokemon5" fitHeight="111.0" fitWidth="127.0" layoutX="301.0" layoutY="338.0" onMouseClicked="#beltPokemon5selected" pickOnBounds="true" preserveRatio="true" visible="false" />
+            <ImageView fx:id="beltPokemon6" fitHeight="118.0" fitWidth="137.0" layoutX="555.0" layoutY="335.0" onMouseClicked="#beltPokemon6selected" pickOnBounds="true" preserveRatio="true" visible="false" />
+            <Label fx:id="beltName1" alignment="CENTER" layoutX="48.0" layoutY="114.0" prefHeight="27.0" prefWidth="210.0" text="No pokemon">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="beltName2" alignment="CENTER" layoutX="305.0" layoutY="114.0" prefHeight="27.0" prefWidth="210.0" text="No pokemon">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="beltName3" alignment="CENTER" layoutX="562.0" layoutY="114.0" prefHeight="27.0" prefWidth="210.0" text="No pokemon">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="beltName4" alignment="CENTER" layoutX="47.0" layoutY="302.0" prefHeight="27.0" prefWidth="210.0" text="No pokemon">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="beltName5" alignment="CENTER" layoutX="305.0" layoutY="302.0" prefHeight="27.0" prefWidth="210.0" text="No pokemon">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="beltName6" alignment="CENTER" layoutX="562.0" layoutY="302.0" prefHeight="27.0" prefWidth="210.0" text="No pokemon">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="pokeSelectedInfo1" alignment="TOP_LEFT" layoutX="166.0" layoutY="159.0" prefHeight="116.0" prefWidth="95.0" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="pokeSelectedInfo2" alignment="TOP_LEFT" layoutX="420.0" layoutY="159.0" prefHeight="116.0" prefWidth="95.0" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="pokeSelectedInfo3" alignment="TOP_LEFT" layoutX="677.0" layoutY="159.0" prefHeight="116.0" prefWidth="95.0" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="pokeSelectedInfo4" alignment="TOP_LEFT" layoutX="166.0" layoutY="346.0" prefHeight="116.0" prefWidth="95.0" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="pokeSelectedInfo5" alignment="TOP_LEFT" layoutX="420.0" layoutY="346.0" prefHeight="116.0" prefWidth="95.0" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="pokeSelectedInfo6" alignment="TOP_LEFT" layoutX="677.0" layoutY="346.0" prefHeight="116.0" prefWidth="95.0" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+   </children>
+</AnchorPane>

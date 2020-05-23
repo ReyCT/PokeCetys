@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewControllers.Pokedex">
+  <tabs>
+    <Tab text="Belt Pokemons">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="580.0" fitWidth="782.0" layoutX="9.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/pokedexBG/beltPokemons.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="switchButton1" fitHeight="23.0" fitWidth="117.0" layoutX="91.0" layoutY="253.0" onMouseClicked="#switchPokemon1" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../Images/pokedexBG/switchButton.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="switchButton2" fitHeight="23.0" fitWidth="117.0" layoutX="356.0" layoutY="253.0" onMouseClicked="#switchPokemon2" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../Images/pokedexBG/switchButton.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="switchButton3" fitHeight="23.0" fitWidth="117.0" layoutX="633.0" layoutY="253.0" onMouseClicked="#switchPokemon3" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../Images/pokedexBG/switchButton.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="switchButton4" fitHeight="23.0" fitWidth="117.0" layoutX="91.0" layoutY="455.0" onMouseClicked="#switchPokemon4" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../Images/pokedexBG/switchButton.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="switchButton5" fitHeight="23.0" fitWidth="117.0" layoutX="356.0" layoutY="455.0" onMouseClicked="#switchPokemon5" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../Images/pokedexBG/switchButton.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="switchButton6" fitHeight="23.0" fitWidth="117.0" layoutX="633.0" layoutY="455.0" onMouseClicked="#switchPokemon6" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../Images/pokedexBG/switchButton.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="beltPokemon1" fitHeight="99.0" fitWidth="116.0" layoutX="26.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="beltPokemon2" fitHeight="99.0" fitWidth="116.0" layoutX="294.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="beltPokemon3" fitHeight="99.0" fitWidth="116.0" layoutX="561.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="beltPokemon4" fitHeight="99.0" fitWidth="116.0" layoutX="26.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="beltPokemon5" fitHeight="99.0" fitWidth="116.0" layoutX="292.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="beltPokemon6" fitHeight="99.0" fitWidth="116.0" layoutX="561.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="pokemonName1" alignment="CENTER" layoutX="26.0" layoutY="121.0" prefHeight="26.0" prefWidth="211.0" text="NO POKEMON">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pokemonName2" alignment="CENTER" layoutX="294.0" layoutY="121.0" prefHeight="26.0" prefWidth="211.0" text="NO POKEMON">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pokemonName3" alignment="CENTER" layoutX="561.0" layoutY="121.0" prefHeight="26.0" prefWidth="211.0" text="NO POKEMON">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pokemonName4" alignment="CENTER" layoutX="29.0" layoutY="320.0" prefHeight="26.0" prefWidth="211.0" text="NO POKEMON">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pokemonName5" alignment="CENTER" layoutX="294.0" layoutY="320.0" prefHeight="26.0" prefWidth="211.0" text="NO POKEMON">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pokemonName6" alignment="CENTER" layoutX="561.0" layoutY="320.0" prefHeight="26.0" prefWidth="211.0" text="NO POKEMON">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pokeInfo1" alignment="TOP_LEFT" layoutX="151.0" layoutY="149.0" prefHeight="96.0" prefWidth="85.0" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pokeInfo2" alignment="TOP_LEFT" layoutX="417.0" layoutY="149.0" prefHeight="96.0" prefWidth="85.0" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pokeInfo3" alignment="TOP_LEFT" layoutX="687.0" layoutY="149.0" prefHeight="96.0" prefWidth="85.0" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pokeInfo4" alignment="TOP_LEFT" layoutX="151.0" layoutY="349.0" prefHeight="96.0" prefWidth="85.0" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pokeInfo5" alignment="TOP_LEFT" layoutX="417.0" layoutY="349.0" prefHeight="96.0" prefWidth="85.0" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pokeInfo6" alignment="TOP_LEFT" layoutX="687.0" layoutY="349.0" prefHeight="96.0" prefWidth="85.0" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Group fx:id="selectNewPokemonGroup" visible="false">
+                     <children>
+                        <ImageView fitHeight="583.0" fitWidth="897.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/pokedexBG/pickNewPokemon.png" />
+                           </image>
+                        </ImageView>
+                        <ListView fx:id="storagePokemonList" layoutX="471.0" layoutY="134.0" onMouseClicked="#refreshPokemonPick" prefHeight="277.0" prefWidth="280.0" />
+                        <ImageView fx:id="newPokemonImg" fitHeight="150.0" fitWidth="200.0" layoutX="54.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="newPokemonInfo" alignment="TOP_LEFT" layoutX="276.0" layoutY="217.0" prefHeight="163.0" prefWidth="116.0" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="newPokemonName" alignment="CENTER" layoutX="65.0" layoutY="164.0" prefHeight="40.0" prefWidth="335.0">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="selectNewPokemonButton" layoutX="533.0" layoutY="429.0" onMouseClicked="#selectNewPokemon" prefHeight="46.0" prefWidth="165.0" />
+                     </children>
+                  </Group>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Medals">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="298.0" text="Medals">
+                     <font>
+                        <Font name="System Bold Italic" size="61.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="90.0" layoutY="108.0" onMouseEntered="#showForestPopUp" onMouseExited="#closeForestPopUp" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/gymsBG/forestMedalBlocked.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="339.0" layoutY="108.0" onMouseEntered="#showPlainsPopUp" onMouseExited="#closePlainsPopUp" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/gymsBG/plainsMedalBlocked.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="626.0" layoutY="108.0" onMouseEntered="#showBeachPopUp" onMouseExited="#closeBeachPopUp" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/gymsBG/beachMedalBlocked.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="57.0" layoutY="294.0" onMouseEntered="#showTownPopUp" onMouseExited="#closeTownPopUp" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/gymsBG/townMedalBlocked.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="336.0" layoutY="272.0" onMouseEntered="#showCavesPopUp" onMouseExited="#closeCavesPopUp" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/gymsBG/cavesMedalBlocked.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="590.0" layoutY="272.0" onMouseEntered="#showMountainsPopUp" onMouseExited="#closeMountainsPopUp" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/gymsBG/mountainsMedalBlocked.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="97.0" fitWidth="77.0" layoutX="362.0" layoutY="445.0" onMouseEntered="#showOnFirePopUp" onMouseExited="#closeOnFirePopUp" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/gymsBG/onFireMedalBlocked.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="forestMedal" fitHeight="150.0" fitWidth="200.0" layoutX="90.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../Images/gymsBG/forestMedal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="plainsMedal" fitHeight="150.0" fitWidth="200.0" layoutX="339.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../Images/gymsBG/plainsMedal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="beachMedal" fitHeight="150.0" fitWidth="200.0" layoutX="626.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../Images/gymsBG/beachMedal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="townMedal" fitHeight="150.0" fitWidth="200.0" layoutX="57.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../Images/gymsBG/townMedal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="cavesMedal" fitHeight="150.0" fitWidth="200.0" layoutX="336.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../Images/gymsBG/cavesMedal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="mountainsMedal" fitHeight="150.0" fitWidth="200.0" layoutX="590.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../Images/gymsBG/mountainsMedal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="onFireMedal" fitHeight="97.0" fitWidth="77.0" layoutX="363.0" layoutY="445.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../Images/gymsBG/onFireMedal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="forestPopUp" fitHeight="99.0" fitWidth="154.0" layoutX="78.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../Images/gymsBG/forestPopUp.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="plainsPopUp" fitHeight="99.0" fitWidth="154.0" layoutX="322.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../Images/gymsBG/plainsPopUp.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="beachPopUp" fitHeight="99.0" fitWidth="154.0" layoutX="588.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../Images/gymsBG/beachPopUp.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="townPopUp" fitHeight="99.0" fitWidth="154.0" layoutX="78.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../Images/gymsBG/townPopUp.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="cavesPopUp" fitHeight="99.0" fitWidth="154.0" layoutX="324.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../Images/gymsBG/cavesPopUp.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="mountainsPopUp" fitHeight="99.0" fitWidth="154.0" layoutX="589.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../Images/gymsBG/mountainsPopUp.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="onFirePopUp" fitHeight="99.0" fitWidth="154.0" layoutX="322.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../Images/gymsBG/onFirePopUp.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Pokemons">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="allPokemonsList" layoutX="502.0" layoutY="99.0" onMouseClicked="#refreshAllPokemon" prefHeight="373.0" prefWidth="225.0" />
+                  <ImageView fx:id="pokemonImageView" fitHeight="305.0" fitWidth="346.0" layoutX="81.0" layoutY="179.0" opacity="0.3" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="pokemonNameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="41.0" layoutY="88.0" prefHeight="91.0" prefWidth="414.0">
+                     <font>
+                        <Font name="System Bold Italic" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="308.0" layoutY="20.0" prefHeight="51.0" prefWidth="238.0" text="All pokemons">
+                     <font>
+                        <Font name="System Bold" size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Profile">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="playerGenderImg" fitHeight="414.0" fitWidth="365.0" layoutX="135.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="playerName" alignment="CENTER" layoutX="31.0" layoutY="32.0" prefHeight="65.0" prefWidth="413.0">
+                     <font>
+                        <Font name="System Bold" size="37.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="114.0" fitWidth="116.0" layoutX="426.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/pokemartItems/pokeball.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="119.0" fitWidth="125.0" layoutX="424.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/pokemartItems/heals.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="74.0" fitWidth="63.0" layoutX="457.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/pokedexBG/coin.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="73.0" fitWidth="82.0" layoutX="454.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/pokedexBG/lossesIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="73.0" fitWidth="74.0" layoutX="454.0" layoutY="462.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/pokedexBG/lupa.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="540.0" layoutY="22.0" text="Pokeballs">
+                     <font>
+                        <Font name="System Bold Italic" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="540.0" layoutY="110.0" text="Potions">
+                     <font>
+                        <Font name="System Bold Italic" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="540.0" layoutY="210.0" text="Coins">
+                     <font>
+                        <Font name="System Bold Italic" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="550.0" layoutY="307.0" text="Losses">
+                     <font>
+                        <Font name="System Bold Italic" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="547.0" layoutY="418.0" text="Found pokemons">
+                     <font>
+                        <Font name="System Bold Italic" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pokeballsQuantity" layoutX="547.0" layoutY="58.0" prefHeight="34.0" prefWidth="121.0">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="healsQuantity" layoutX="547.0" layoutY="148.0" prefHeight="34.0" prefWidth="121.0">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="coinsQuantity" layoutX="547.0" layoutY="249.0" prefHeight="34.0" prefWidth="121.0">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lossesQuantity" layoutX="550.0" layoutY="360.0" prefHeight="34.0" prefWidth="121.0">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="foundPokemons" layoutX="550.0" layoutY="477.0" prefHeight="34.0" prefWidth="121.0">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewControllers.Map">
+   <children>
+      <ImageView fitHeight="536.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Map.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="caves" layoutX="14.0" layoutY="48.0" onMouseClicked="#cavesMap" prefHeight="119.0" prefWidth="150.0" />
+      <Label layoutX="225.0" layoutY="48.0" onMouseClicked="#forestMap" prefHeight="125.0" prefWidth="185.0" />
+      <Label fx:id="plains" layoutX="262.0" layoutY="210.0" onMouseClicked="#plainsMap" prefHeight="95.0" prefWidth="219.0" />
+      <Label fx:id="beach" layoutX="236.0" layoutY="325.0" onMouseClicked="#beachMap" prefHeight="119.0" prefWidth="203.0" />
+      <Label fx:id="mountains" layoutX="550.0" layoutY="95.0" onMouseClicked="#mountainsMap" prefHeight="153.0" prefWidth="236.0" />
+      <Label fx:id="town" layoutX="616.0" layoutY="325.0" onMouseClicked="#townMap" prefHeight="144.0" prefWidth="160.0" />
+      <ImageView fx:id="plainsLock" fitHeight="75.0" fitWidth="53.0" layoutX="345.0" layoutY="216.0" onMouseClicked="#showLockedAreasMessage" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/AreaLock.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="beachLock" fitHeight="75.0" fitWidth="53.0" layoutX="285.0" layoutY="332.0" onMouseClicked="#showLockedAreasMessage" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/AreaLock.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="townLock" fitHeight="75.0" fitWidth="53.0" layoutX="669.0" layoutY="352.0" onMouseClicked="#showLockedAreasMessage" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/AreaLock.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="cavesLock" fitHeight="75.0" fitWidth="53.0" layoutX="48.0" layoutY="75.0" onMouseClicked="#showLockedAreasMessage" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/AreaLock.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mountainsLock" fitHeight="75.0" fitWidth="53.0" layoutX="642.0" layoutY="135.0" onMouseClicked="#showLockedAreasMessage" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/AreaLock.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lockedAreasPopUp" fitHeight="163.0" fitWidth="499.0" layoutX="6.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Images/unlockAreasMessage.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

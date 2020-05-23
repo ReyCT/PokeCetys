@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewControllers.mainScreen">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/enviroment/mainScreen.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="251.0" layoutY="323.0" onMouseClicked="#loadGameButton" prefHeight="80.0" prefWidth="300.0" />
+      <Label layoutX="250.0" layoutY="226.0" onMouseClicked="#newGameButton" prefHeight="80.0" prefWidth="300.0" />
+      <ImageView fx:id="noFileFound" fitHeight="282.0" fitWidth="660.0" layoutX="70.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Images/noFileFound.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
